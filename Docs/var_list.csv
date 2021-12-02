@@ -1,0 +1,42 @@
+var_name,class,description
+CCG,character,"Cleaned CCG to use in analysis. The onboarding CCG was used if valid. If not, the testing CCG was used if valid, otherwise the patient's GDPPR CCG was used."
+CCG_ONBOARD,character,The CCG at which the patient was onboarded onto CO@h.
+CCG_TESTING,character,The CCG at which the patient was first tested positive for COVID.
+CCG_GDPPR,character,The patient's CCG listed in GDPPR.
+NHS_NUMBER_DEID,character,"The patient's pseudonymised NHS number, used as the patient identifier."
+WEEK_OF_BIRTH,integer,The number of complete weeks (7 day periods) that elapsed between 01-01-1900 and  the date of birth of the patient.
+DOBMIN,Date,"The minimum possible date of birth of the patient, based on the WEEK_OF_BIRTH."
+DOBMAX,Date,"The maximum possible date of birth of the patient, based on the WEEK_OF_BIRTH."
+BD65MIN,Date,The minimum possible date of the patient's 65th birthday.
+BD65MAX,Date,The maximum possible date of the patient's 65th birthday.
+ETHNIC,factor,The ethnicity of the patient (split into 18 categories).
+SEX,factor,The sex of the patient.
+MALE,integer,Dummy variable identifying whether the patient is male.
+CEV,integer,Dummy variable identifying whether the patient is clinically extremely vulnerable (CEV).
+CARE_HOME_FLAG,numeric,Dummy variable identifying whether the patient is a care home resident.
+LSOA,character,Lower Super Output Area code of patient's home address.
+PRACTICE,character,Identifier code for the GP practice the patient is registered at.
+FINDEXDATE,Date,Date of first positive COVID test.
+ONBOARDED,character,String identifying whether the patient was onboarded onto CO@h (Y/N).
+LISTED_GDPPR,logical,Flag identifying whether the patient's CCG recorded in the GDPPR is valid.
+LISTED_TESTING,logical,Flag identifying whether the patient's test site CCG recorded in the testing data is valid.
+LISTED,logical,Flag identifying whether the patient's onboarding CCG recorded in the onboarding data is valid.
+COMPLETE_CCG,logical,Flag identifying whether the cleaned CCG is listed as having provided 'complete' data (complete meaning all the data they could provide).
+BD50MIN,Date,The minimum possible date of the patient's 50th birthday.
+BD50MAX,Date,The maximum possible date of the patient's 50th birthday.
+age_min,numeric,The minimum age of the patient at the date of the first positive COVID test (decimal).
+age_max,numeric,The maximum age of the patient at the date of the first positive COVID test (decimal).
+age_min_int,integer,The minimum age of the patient at the date of the first positive COVID test (integer).
+age_max_int,integer,The maximum age of the patient at the date of the first positive COVID test (integer).
+ok_at_65,logical,Flag to identify patients near the age 65 cut-off for whom their age cannot be consistently determined (64 or 65).
+ok_at_50,logical,Flag to identify patients near the age 50 cut-off for whom their age cannot be consistently determined (49 or 50).
+wks_min65,numeric,Number of weeks between the patient's first positive COVID test date and their minimum 65th birthday.
+wks_max65,numeric,Number of weeks between the patient's first positive COVID test date and their maximum 65th birthday.
+wks_min50,numeric,Number of weeks between the patient's first positive COVID test date and their minimum 50th birthday.
+wks_max50,numeric,Number of weeks between the patient's first positive COVID test date and their maximum 50th birthday.
+wks65,integer,The maximum number of weeks (in either direction) between the patient's first positive COVID test date and the age 65 cut-off.
+yrs65,numeric,The year (52 week period) from the age 65 cut-off (in either direction) in which the patient's first positive COVID test date falls.
+wks50,integer,The maximum number of weeks (in either direction) between the patient's first positive COVID test date and the age 50 cut-off.
+yrs50,numeric,The year (52 week period) from the age 50 cut-off (in either direction) in which the patient's first positive COVID test date falls.
+over65,character,String identifying whether the patient was 65 and over at the date of first positive COVID test.
+over50,character,String identifying whether the patient was 50 and over at the date of first positive COVID test.
